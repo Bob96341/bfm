@@ -18,3 +18,7 @@ i guess
 it's nice
 
 it has lolcat
+
+which means that lolcat is obviously a dependency
+
+yeah
