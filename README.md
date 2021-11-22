@@ -1,4 +1,4 @@
-# bfs
+# bfm
 bob file manager
 
 this is the bob file manager
