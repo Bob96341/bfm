@@ -3,22 +3,12 @@ bob file manager
 
 this is the bob file manager
 
-that's all it is
+please make sure you have lolcat as it is an important dependency
 
-just a file manager
+it would be preferable if you added this line to your .bashrc file
 
-for linux
+"source /path/to/bfs.sh"
 
-yeah
+it is important that it is <<source>>
 
-it's in bash
-
-i guess
-
-it's nice
-
-it has lolcat
-
-which means that lolcat is obviously a dependency
-
-yeah
+thank you
