@@ -1,41 +1,40 @@
 #!/bin/bash
 
 clear ; ls -a | lolcat
+echo "- - - - -"
+echo "\"exit\" to exit, otherwise state which directory you want to access."
+echo "To use a command please type \":\" before the command."
+echo "To display this help message type \"help\""
 while read line
 do
 	case $line in
 		"exit")
-			clear ; break
+			break
 			;;
-		"mkdir")
-			clear ; ls -a | lolcat 
-			echo "Name the directory: " 
-			read namae 
-			mkdir "$namae" 
+		"help")
 			clear ; ls -a | lolcat
+			echo "- - - - -"
+			echo "\"exit\" to exit, otherwise state which directory you want to access."
+			echo "To use a command please type \":\" before the command."
+			echo "To display this help message type \"help\""
 			;;
-		"touch")
-			clear ; ls -a | lolcat 
-			echo "Name the file: " 
-			read namae 
-			touch "$namae" 
-			clear ; ls -a | lolcat
-			;;
-		"rm")
-			clear ; ls -a | lolcat 
-			echo "Remove which file? " 
-			read namae
-			rm "$namae" ; rm -d "$namae" 
-			clear ; ls -a | lolcat
-			;;
+
 		*)
-			if clear ; cd "$line"
+			if [ "${line:0:1}" = ":" ] 
 			then
-				ls -a | lolcat
-			else
+				asa=${line:1}
+				$asa
 				clear ; ls -a | lolcat
-				echo "Error: Wrong Directory"
+			else
+				if clear ; cd "$line"
+				then
+					ls -a | lolcat
+				else
+					clear ; ls -a | lolcat
+					echo "Error: Wrong directory"
+				fi
 			fi
 			;;
+
 	esac
 done
