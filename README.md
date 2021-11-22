@@ -9,6 +9,6 @@ it would be preferable if you added this line to your .bashrc file
 
 "source /path/to/bfs.sh"
 
-it is important that it is <<source>>
+it is important that it is "source"
 
 thank you
